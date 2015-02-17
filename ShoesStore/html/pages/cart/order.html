@@ -1,0 +1,25 @@
+<div class="row" ng-controller="cartOrderController">
+	<div class="panel panel-default">
+		<ol class="breadcrumb">
+			<li><a href="#/cart-review">Review</a></li>
+			<li><a href="#/cart-billing">Billing</a></li>
+			<li class="active">Your Order</li>
+			<li><a href="#/cart-confirmation">Confirmation</a></li>
+		</ol>
+		<div class="panel-body margin">
+			<h3>Your Order</h3>
+
+			<p><strong>First name</strong>: John</p>
+			<p><strong>Last name</strong>: Doe</p>
+			<p><strong>Email address</strong>: example@example.com</p>
+			<p><strong>Street address</strong>: 1234 Main Street</p>
+			<p><strong>Credit card</strong>: *********6789</p>
+			<br />
+			<p><strong>Number of products</strong>: {{numOfProducts}}</p>
+			<p><strong>Your total order:</strong>: {{totalCost | currency}}</p>
+
+			<a href="#/cart-billing" role="button" class="btn btn-primary btn-lg">Back</a>
+			<a href="#/cart-confirmation" role="button" class="btn btn-primary btn-lg pull-right">Next</a>
+		</div>
+	</div>
+</div>

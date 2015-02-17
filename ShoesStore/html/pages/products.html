@@ -1,0 +1,24 @@
+<div class="jumbotron text-center" ng-controller="productController">
+	<h2>Products</h2>
+	
+	<div class="row">
+		<div ng-repeat="p in products">
+			<div class="col-sm-6 col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="thumbnail">
+							<img ng-src="img/{{p.Gender | lowercase}}/{{p.Category | lowercase}}/{{p.Image}}">
+						</div>
+						<div class="caption">
+							<h3>{{ p.Name }}</h3>
+							<p>Price: {{ p.Price | currency}}</p>
+							<!--<p>{{ p.Description }}</p>-->
+							<button class="btn btn-block btn-default btn-lg btn-primary" role="button" ng-click="orderProduct(p.ShoeId, p.Price);">Order</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

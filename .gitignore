@@ -1,0 +1,11 @@
+[Tt]humbs.db
+*.DS_Store
+
+bin/
+obj/
+packages/
+
+*.suo
+*.user
+
+*.mdf

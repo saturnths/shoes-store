@@ -1,0 +1,34 @@
+<div class="row" ng-controller="cartReviewController">
+	<div class="panel panel-default">
+		<ol class="breadcrumb">
+			<li class="active">Review</li>
+			<li><a href="#/cart-billing">Billing</a></li>
+			<li><a href="#/cart-order">Your Order</a></li>
+			<li><a href="#/cart-confirmation">Confirmation</a></li>
+		</ol>
+		<div class="panel-body margin">
+			<h3>Review</h3>
+			
+			<div class="row">
+				<table class="table table-striped">
+					<tr ng-repeat="p in productsInCart">
+						<td><strong>Product</strong>: {{p.Name}}</td>
+						<td>
+							<button type="button" class="btn btn-primary btn-danger pull-right" ng-click="removeProduct(p, p.ShoeId)">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<p ng-hide="numOfProducts > 0">You have no products in the shopping cart.</p>
+			<div ng-hide="numOfProducts == 0">
+				<p><strong>Products</strong>: {{numOfProducts}}</p>
+				<p><strong>Total</strong>: {{totalCost | currency}}</p>
+			</div>
+			
+			<a href="#/cart-billing" role="button" class="btn btn-primary btn-lg pull-right">Next</a>
+		</div>
+	</div>
+</div>

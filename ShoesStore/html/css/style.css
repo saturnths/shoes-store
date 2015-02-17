@@ -1,0 +1,16 @@
+h4 {
+	color: #777 !important;
+}
+
+#count {
+	color: #fff;
+	font-weight: bold;
+	font-size: 15pt;
+	background-color: #3c5c6c;
+	padding: 0.5em;
+	margin: 0;
+}
+
+.margin {
+	margin: 0 2em;
+}
